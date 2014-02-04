@@ -112,7 +112,7 @@ ColorThief.prototype.getPalette = function(sourceImage, colorCount, quality, dat
     var imageData  = image.getImageData(data.width, data.height);
     var pixels     = imageData.data;
     var pixelCount = image.getPixelCount(data.width, data.height);
-    alert('boom') // For testing , we can see the mini canvas made
+    //alert('boom') // For testing , we can see the mini canvas made
     // Store the RGB values in an array format suitable for quantize function
     var pixelArray = [];
     for (var i = 0, offset, r, g, b, a; i < pixelCount; i = i + quality) {
