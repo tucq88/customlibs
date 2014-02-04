@@ -60,7 +60,7 @@ CanvasImage.prototype.removeCanvas = function () {
 };
 
 
-var ColorThief = iorad.editor.ColorThief = function () {};
+var ColorThief = function () {};
 
 /*
  * getColor(sourceImage[, quality])
