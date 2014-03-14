@@ -1,0 +1,27 @@
+{
+  "name": "chaplin.view",
+  "version": "0.1.5",
+  "author": "Adam Krebs <amk528@cs.nyu.edu>",
+  "description": "Base View and CollectionView classes from Chaplin",
+  "licence": "MIT",
+  "main": "chaplin.view",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akre54/chaplin.view"
+  },
+  "dependencies": {
+    "backbone": "*",
+    "underscore": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  },
+  "engines": {
+    "node": "*",
+    "npm": "*"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  }
+}
