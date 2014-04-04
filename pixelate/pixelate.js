@@ -304,6 +304,8 @@
 
     pixelateSelectedArea: function (radius) {
       radius = radius || this.options.radius;
+      // radius must be within 1 - 100
+      radius = radius < 1 ? 1 : (radius > 100 ? 100 : radius);
 
       var sa = this.getSelectedArea();
 
@@ -318,7 +320,7 @@
 
       this._pixelatedContext.drawImage(this.currentCanvas, 0, 0, pixelatedWidth, pixelatedHeight);
       this._pixelatedContext.drawImage(this._pixelatedCanvas, 0, 0, pixelatedWidth, pixelatedHeight,
-          0, 0, currentCanvas.width, currentCanvas.height);
+          1, 1, currentCanvas.width, currentCanvas.height);
 
       if (this.options.debug) {
         //debugging
