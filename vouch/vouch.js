@@ -1,8 +1,6 @@
 /**
  * vouch.js to handle permission management
  *
- * //TODO(hoatle): move this to customlibs
- *
  * @author hoatle
  * @since  2014-05-24
  */
