@@ -142,7 +142,7 @@
 			// store if the slider is in carousel mode (displaying / moving multiple slides)
 			slider.carousel = slider.settings.minSlides > 1 || slider.settings.maxSlides > 1 ? false : true;
 			// if carousel, force preloadImages = 'all'
-			if(slider.carousel){ slider.settings.preloadImages = 'all'; }
+			//if(slider.carousel){ slider.settings.preloadImages = 'all'; }
 			// calculate the min / max width thresholds based on min / max number of slides
 			// used to setup and update carousel slides dimensions
 			slider.minThreshold = (slider.settings.minSlides * slider.settings.slideWidth) + ((slider.settings.minSlides - 1) * slider.settings.slideMargin);
@@ -269,11 +269,11 @@
 				slider.settings.pager = false;
 			}
 			// preload all images, then perform final DOM / CSS modifications that depend on images being loaded
-			loadElements(preloadSelector, start);
+			if (slider.settings.preloadImages) loadElements(preloadSelector, start);
+			else start();
 		};
 
 		var loadElements = function(selector, callback){
-			debugger;
 			var total = selector.find('img, iframe').length;
 			if(total === 0){
 				callback();
