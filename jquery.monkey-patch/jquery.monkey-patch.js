@@ -13,7 +13,7 @@
       if (typeof axis == 'undefined' || axis == 'y') overflowAxis = this.css('overflow-y');
       else overflowAxis = this.css('overflow-x');
 
-      var bShouldScroll = this.get(0).scrollHeight > this.innerHeight();
+      var bShouldScclearoll = this.get(0).scrollHeight > this.innerHeight();
 
       var bAllowedScroll = (overflow == 'auto' || overflow == 'visible') ||
           (overflowAxis == 'auto' || overflowAxis == 'visible');
