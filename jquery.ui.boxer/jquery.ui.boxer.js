@@ -14,8 +14,7 @@ $.widget('ui.boxer', $.ui.mouse, {
     appendTo: 'body',  //TODO(hoatle): support "parent" and relative positioned parent
     helperBorder: '1px dotted black',
     helperClass: '',
-    cursor: 'crosshair',
-    isAppendedToParent: false
+    cursor: 'crosshair'
   },
   _init: function() {
     this.element.addClass('ui-boxer');
@@ -27,7 +26,7 @@ $.widget('ui.boxer', $.ui.mouse, {
         .addClass(this.options.helperClass)
         .addClass('ui-boxer-helper');
     
-    this.appendToElement = this.options.isAppendedToParent ? 
+    this.appendToElement = this.options.appendTo == 'parent' ? 
       this.element.parent() : $(this.options.appendTo);
   },
   _destroy: function() {
