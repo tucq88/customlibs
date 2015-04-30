@@ -102,7 +102,7 @@
       w: width,
       h: height,
       isEmpty: function() {
-        return (x <= 0 && y <= 0 && width <= 0 && height <= 0);
+        return ((x < 0 && y < 0) || width <= 0 || height <= 0);
       },
       isValid: function() {
         return (x !== undefined && y !== undefined && width !== undefined && height !== undefined);
