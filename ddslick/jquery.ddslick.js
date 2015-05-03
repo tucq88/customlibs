@@ -5,7 +5,7 @@
 //Twitter: http://twitter.com/chaudharyp
 
 // Fork for @iorad based on https://github.com/prashantchaudhary/ddslick.git#f83bb4f1d0e6124bd2f00ccff96ae948dec0f936
-// Maluen 03/05/15: Add update function to avoid to call destroy that causes flickering
+// Maluen 3 May 15: Add update function to avoid to call destroy since causes flickerings
 
 (function ($) {
 
