@@ -25,8 +25,8 @@ $.widget('ui.boxer', $.ui.mouse, {
         .css({border: this.options.helperBorder})
         .addClass(this.options.helperClass)
         .addClass('ui-boxer-helper');
-    
-    this.appendToElement = this.options.appendTo == 'parent' ? 
+
+    this.appendToElement = this.options.appendTo == 'parent' ?
       this.element.parent() : $(this.options.appendTo);
   },
   _destroy: function() {
@@ -64,9 +64,9 @@ $.widget('ui.boxer', $.ui.mouse, {
     this._trigger('start', event);
 
     this.appendToElement.append(this.helper);
-    
+
     var coords = this._calculateCoords({ left: event.clientX, top: event.clientY });
-    
+
     this.helper.css({
       'z-index': 100,
       'position': 'absolute',
@@ -86,9 +86,9 @@ $.widget('ui.boxer', $.ui.mouse, {
     var x1 = this.startedPosition['x'], y1 = this.startedPosition['y'], x2 = event.pageX, y2 = event.pageY;
     if (x1 > x2) { var tmp = x2; x2 = x1; x1 = tmp; }
     if (y1 > y2) { tmp = y2; y2 = y1; y1 = tmp; }
-    
+
     var coords = this._calculateCoords({ left: x1, top: y1 });
-    
+
     this.helper.css({left: coords.left, top: coords.top, width: x2-x1, height: y2-y1});
 
     this._trigger('drag', event);
@@ -109,16 +109,16 @@ $.widget('ui.boxer', $.ui.mouse, {
 
     return false;
   },
-  
+
   _calculateCoords: function(originalCoords) {
     var leftCoord = originalCoords.left;
     var topCoord = originalCoords.top;
-    
+
     if(this.appendToElement.css('position') == "relative") {
       leftCoord -= this.appendToElement.offset().left;
       topCoord -= this.appendToElement.offset().top;
     }
-    
+
     return { left: leftCoord, top: topCoord };
   }
 });
