@@ -5156,6 +5156,16 @@ wysihtml5.dom.parse = (function() {
         attributeValue = (attributeValue || "").replace(REG_EXP, "");
         return attributeValue || null;
       };
+    })(),
+
+    // CUSTOMLIBS: taken from https://github.com/Voog/wysihtml/blob/master/dist/wysihtml.js#L7310
+    any: (function() {
+      return function(attributeValue) {
+        if (!attributeValue) {
+          return null;
+        }
+        return attributeValue;
+      };
     })()
   };
   
