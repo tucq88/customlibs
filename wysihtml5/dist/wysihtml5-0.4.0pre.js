@@ -5521,6 +5521,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
         "marginwidth":        0,
         "marginheight":       0
       }).on(iframe);
+      iframe.style.cssText = "border: 3px solid rgb(169, 169, 169) !important; outline: 0 !important;";
 
       // Setting the src like this prevents ssl warnings in IE6
       if (wysihtml5.browser.throwsMixedContentWarningWhenIframeSrcIsEmpty()) {
