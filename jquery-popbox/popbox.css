@@ -1,0 +1,113 @@
+.popbox {
+	margin:0px auto;
+	text-align:center;
+	position:relative;
+}
+
+.collapse {
+	position:relative;
+}
+
+.open {
+	background:#DDD;
+	border:solid 1px #FFF;
+	border-radius:5px;
+	box-shadow: 0px 0px 5px #CCC;
+	background:-webkit-gradient(linear,left top,left bottom,from(#f4f4f4),to(#e8e8e8));
+	background:-moz-linear-gradient(top,#f4f4f4,#e8e8e8);
+	background:linear-gradient(top,#f4f4f4,#e8e8e8);
+	padding:8px;
+}
+
+.box {
+	display:block;
+	display:none;
+	background:#FFF;
+	border:solid 1px #BBBBBB;
+	border-radius:5px;
+	box-shadow:0px 0px 15px #999;
+	position:absolute;
+}
+
+.box a.close {
+	color:red;
+	font-size:12px;
+	font-family:arial;
+	text-decoration:underline;
+}
+
+.arrow {
+	width: 0;
+	height: 0;
+	border-color: #FFF;
+	position:absolute;
+	z-index:1001;
+}
+
+.arrow-border {
+	width: 0;
+	height: 0;
+	border-color: #BBBBBB;
+	position:absolute;
+	z-index:1000;
+}
+
+.arrowtop {
+	border-left: 11px solid transparent;
+	border-right: 11px solid transparent;
+	border-bottom: 11px solid #FFF;
+	left:1px;
+	top:-10px;
+}
+
+.arrowleft {
+	border-bottom: 11px solid transparent;
+	border-top: 11px solid transparent;
+	border-right: 11px solid #FFF;
+	bottom:1px;
+	left:-10px;
+}
+
+.arrowright {
+	border-bottom: 11px solid transparent;
+	border-top: 11px solid transparent;
+	border-left: 11px solid #FFF;
+	top:1px;
+	right:-10px;
+}
+
+.arrowbottom {
+	border-left: 11px solid transparent;
+	border-right: 11px solid transparent;
+	border-top: 11px solid #FFF;
+	right:1px;
+	bottom:-10px;
+}
+
+.arrowtop-border {
+	border-left: 11px solid transparent;
+	border-right: 11px solid transparent;
+	border-bottom: 11px solid #BBBBBB;
+	top:-12px;
+}
+
+.arrowleft-border {
+	border-bottom: 11px solid transparent;
+	border-top: 11px solid transparent;
+	border-right: 11px solid #BBBBBB;
+	left:-12px;
+}
+
+.arrowright-border {
+	border-bottom: 11px solid transparent;
+	border-top: 11px solid transparent;
+	border-left: 11px solid #BBBBBB;
+	right:-12px;
+}
+
+.arrowbottom-border {
+	border-left: 11px solid transparent;
+	border-right: 11px solid transparent;
+	border-top: 11px solid #BBBBBB;
+	bottom:-12px;
+}
